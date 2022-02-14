@@ -10,4 +10,8 @@ class ConditionPredicate {
   final Object value;
 
   ConditionPredicate(this.type, this.field, this.value);
+
+  @override
+  String toString() =>
+      'ConditionPredicate{type: $type, field: $field, value: $value}';
 }
