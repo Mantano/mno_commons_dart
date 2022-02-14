@@ -7,6 +7,7 @@ import 'package:mno_commons/utils/condition_type.dart';
 
 abstract class Predicate<T> {
   static const Predicate acceptAll = AcceptAllPredicate();
+  final bool dbOnly = true;
 
   List<ConditionPredicate> conditionsPredicate = [];
 
@@ -40,4 +41,8 @@ class AcceptAllPredicate<T> implements Predicate<T> {
 
   @override
   set conditionsPredicate(List<ConditionPredicate> _conditionsPredicate) {}
+
+  @override
+  // TODO: implement dbOnly
+  bool get dbOnly => true;
 }
